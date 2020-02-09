@@ -28,7 +28,7 @@ require("auth/EtreAuthentifie.php");
 			<?php
 		} else {
 			try {
-				require("Admin/db_config.php");
+				require("db_config.php");
 				$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
    				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				if(isset($_SESSION['rid'])) {

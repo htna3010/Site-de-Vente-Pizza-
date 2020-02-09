@@ -32,7 +32,7 @@ $rid = $_SESSION['rid'];
 			
 			<?php
 			
-			require ("Admin/db_config.php");
+			require ("db_config.php");
 			try {
 					foreach ($_POST['supplement'] as $selection){
 						$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
@@ -83,7 +83,7 @@ $rid = $_SESSION['rid'];
 			</tr>
 			<?php
 			try{
-				require ("Admin/db_config.php");
+				require ("db_config.php");
 				$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
    				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    				$SQL = "SELECT * FROM recettes WHERE rid ='$rid'";

@@ -8,7 +8,7 @@ if (!isset($_GET["id"])) {
 			$test = 0;
 			$rid = $_GET["id"];
 			try {
-				require("../db_config.php");
+				require("../../db_config.php");
 				$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
 				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$SQL = "SELECT * FROM recettes WHERE rid = ?";

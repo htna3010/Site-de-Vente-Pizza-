@@ -1,7 +1,7 @@
 <?php
 
 	require("../auth/EtreAuthentifie.php");
-	require('db_config.php');
+	require('../db_config.php');
 	
 		if($idm->getRole() == 'admin' ) {
 			require("header.php");

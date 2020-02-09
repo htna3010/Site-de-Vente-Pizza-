@@ -19,7 +19,7 @@ if (!isset($_POST['nom']) || !isset($_POST['prix'])) {
 
 //Insertion des données
     // connexion a la BD
-        require("../db_config.php");
+        require("../../db_config.php");
         try {
             $db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
         	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

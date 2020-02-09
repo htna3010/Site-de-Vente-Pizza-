@@ -10,7 +10,7 @@ if (!isset($_GET["id"])) {
 	echo "Operation annulee";
 }else{
 //suppression
-	require("../db_config.php");
+	require("../../db_config.php");
 	try {
 		$sid =$_GET["id"];
 		$db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
